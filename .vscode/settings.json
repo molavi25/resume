@@ -1,12 +1,12 @@
 {
   "latex-workshop.latex.autoBuild.run": "onSave",
-  "latex-workshop.latex.recipe.default": "Tectonic",
+  "latex-workshop.latex.recipe.default": "Tectonic + PNG",
   "latex-workshop.latex.outDir": "%DIR%",
 
   "latex-workshop.latex.recipes": [
     {
-      "name": "Tectonic",
-      "tools": ["tectonic"]
+      "name": "Tectonic + PNG",
+      "tools": ["tectonic", "pdf-to-png"]
     }
   ],
 
@@ -17,7 +17,19 @@
       "args": [
         "--outdir",
         "%OUTDIR%",
-        "%DOC%"
+        "%DOC_EXT%"
+      ]
+    },
+    {
+      "name": "pdf-to-png",
+      "command": "pdftoppm",
+      "args": [
+        "-png",
+        "-singlefile",
+        "-r",
+        "180",
+        "%OUTDIR%/%DOCFILE%.pdf",
+        "%OUTDIR%/%DOCFILE%"
       ]
     }
   ],
