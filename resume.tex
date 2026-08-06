@@ -1,0 +1,180 @@
+%-------------------------
+% Resume in Latex
+% Author : Ali
+% Based off of: https://github.com/molavi25/resume
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underline
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ONLY CHANGING MARGINS TO FIT CONTENT
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.8in} 
+\addtolength{\textheight}{1.6in} 
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% ADJUSTING ONLY SECTION GAPS, NOT LINE HEIGHT
+\titleformat {\section}{
+    \bfseries \vspace{-2pt} \raggedright \large 
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}} % Restored to your original value
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ 
+      \textit{#3} & {\color{dark-grey} \small #4}\\ 
+    \end{tabular*}\vspace{-4pt} % Restored to your original value
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Ali Molavi} \\ \vspace{5pt}
+     \hspace{1pt}
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{alixmolavi@gmail.com} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Tehran. Iran}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{SUMMARY}
+\small{Software Engineer with 5+ years of experience specializing in \textbf{scalable backend services} and \textbf{3D visualization and geospatial data systems}. Proven track record of delivering high-impact features for international teams using the \textbf{TypeScript ecosystem and AWS}.}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {GeoVision}{Sep. 2023 -- Present}
+      {Software Engineer}{Remote $|$ Bern, Switzerland}
+      \resumeItemListStart
+        \resumeItem{\textbf{Architected and developed scalable backend services} for high-volume 3D and geospatial data processing, delivering reliable APIs and real-time data workflows.}
+        \resumeItem{\textbf{Designed and operated cloud infrastructure on AWS}, including compute, networking, storage, and deployment automation, improving system availability, fault tolerance, and operational scalability.}
+         \resumeItem{\textbf{Built robust CI/CD pipelines and containerized services using Docker and Kubernetes}, accelerating deployment cycles, and enabling consistent environments across development, staging, and production.}
+        \resumeItem{\textbf{Led backend performance optimization and system hardening}, improving throughput, reducing latency, strengthening observability, and increasing overall platform stability under heavy workloads.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Seeq}{Oct. 2022 -- Sep. 2023}
+      {FullStack Developer}{Remote $|$ San Francisco, CA}
+      \resumeItemListStart
+        \resumeItem{\textbf{Implemented and enhanced complex user interfaces} in a modern SaaS analytics platform using \textbf{React, TypeScript, and responsive design}, delivering interactive visualizations for time series data and analytics workflows used by industrial customers worldwide.}
+        \resumeItem{\textbf{Collaborated closely with product, backend, and design teams} to translate requirements into performant, scalable frontend features, ensuring consistency with UX/UI specifications and real-world workflows for process engineers and data scientists.}
+        \resumeItem{\textbf{Optimized frontend performance and client-side state management}, improving application responsiveness and load times across data-intensive dashboards and interactive components, resulting in measurable user experience gains.}
+        \resumeItem{\textbf{Maintained high code quality and developer velocity} through comprehensive \textbf{unit and integration testing}, code reviews, and continuous integration practices that aligned with the team’s agile development process.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Lingoberry}{Aug. 2020 -- Oct. 2022}
+      {Software Engineering Intern}{Tehran, Iran} 
+      \resumeItemListStart
+        \resumeItem{\textbf{Developed production features across both frontend and backend} using \textbf{Next.js, React, TypeScript, NestJS, GraphQL, and PostgreSQL}, contributing to user-facing functionality and core business logic.}
+        \resumeItem{\textbf{Built modern, responsive UI components} with \textbf{Material UI, Mantine, Styled-Components, and Sass}, implementing complex forms, dashboards, animations, and interactive visualizations using \textbf{Chart.js, Framer Motion, and Lottie}.}
+        \resumeItem{\textbf{Integrated frontend applications with GraphQL APIs}, handling authentication, data fetching, client-side state management with \textbf{Zustand}, and improving UX through optimized loading states and error handling.}
+        \resumeItem{\textbf{Implemented backend endpoints and services} in NestJS, working with database models, validations, authentication (JWT, Passport), and business workflows under the guidance of senior engineers.}
+        \resumeItem{\textbf{Participated in code reviews, testing, and debugging sessions}, gaining experience with production-grade development practices, Git workflows, and collaborative software delivery.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Tehran}{Sep 2019 -- Feb 2022}
+      {Mechanical Engineering}{No degree}
+  \resumeSubHeadingListEnd
+
+%----------- SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: TypeScript, JavaScript, HTML5/CSS3, SQL (PostgreSQL, MySQL)}\vspace{2pt} \\
+     \textbf{Frameworks / Libraries} {: Node.js, Express, NestJS, React.js, Next.js, Vue.js, Three.js, GraphQL, Apollo Client}\vspace{2pt} \\
+     \textbf{Cloud / DevOps} {: AWS (EKS, EC2, S3, Lambda), Docker, Kubernetes, CI/CD}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}

@@ -1,0 +1,33 @@
+{
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.recipe.default": "Tectonic",
+  "latex-workshop.latex.outDir": "%DIR%",
+
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "Tectonic",
+      "tools": ["tectonic"]
+    }
+  ],
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "tectonic",
+      "command": "tectonic",
+      "args": [
+        "--outdir",
+        "%OUTDIR%",
+        "%DOC%"
+      ]
+    }
+  ],
+
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.tab.editorGroup": "right",
+  "latex-workshop.view.pdf.zoom": "page-width",
+
+  "[latex]": {
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": false
+  }
+}
